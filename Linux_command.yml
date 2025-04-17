@@ -1,0 +1,12 @@
+---
+- name: List contents of root directory on target hosts
+  hosts: target_hosts
+  gather_facts: true
+  tasks:
+    - name: Run 'ls /' on remote hosts
+      ansible.builtin.command: ls /
+      register: root_contents
+
+    - name: Show output
+      ansible.builtin.debug:
+        var: root_contents.stdout_lines
