@@ -4,7 +4,7 @@
   gather_facts: true
   tasks:
     - name: Run 'ls /' on remote hosts
-      ansible.builtin.command: ls /etc
+      ansible.builtin.command: ls /dev
       register: root_contents
 
     - name: Show output
