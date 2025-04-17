@@ -1,0 +1,7 @@
+---
+- name: Ping two Linux machines
+  hosts: target_hosts
+  gather_facts: false
+  tasks:
+    - name: Ping the target machine
+      ansible.builtin.ping:
